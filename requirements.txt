@@ -1,0 +1,12 @@
+# Lichess
+lichesspy
+
+# Discord
+discord
+discord.py
+
+# ENV 
+python-dotenv
+
+# Math
+numpy
