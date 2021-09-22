@@ -1,4 +1,4 @@
-import lichesspy.api as lichess
+from lichesspy.api import user as liuser
 from discord.ext import commands
 from config import TOKEN
 
@@ -14,7 +14,7 @@ async def get_elo(ctx, arg1, arg2):
     try:
 
         # Loads all information of the user into the variable
-        user = lichess.user(arg1)['perfs'][arg2]['rating']
+        user = liuser(arg1)['perfs'][arg2]['rating']
 
         # Sends the message to the channel
         await ctx.send(f"{arg1}s {arg2} rating auf Lichess ist: {user}")
