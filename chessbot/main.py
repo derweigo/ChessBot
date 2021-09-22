@@ -17,7 +17,7 @@ async def get_rapid(ctx, user):
         await ctx.send(f"Fehler: {error}")
 
 @bot.command(name='blitz')
-async def get_rapid(ctx, user):
+async def get_blitz(ctx, user):
     """ The function returns the blitz rating.  """
     try:
         await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "blitz"))
@@ -26,7 +26,7 @@ async def get_rapid(ctx, user):
         await ctx.send(f"Fehler: {error}")
 
 @bot.command(name='bullet')
-async def get_rapid(ctx, user):
+async def get_bullet(ctx, user):
     """ The function returns the rapid bullet.  """
     try:
         await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "bullet"))
