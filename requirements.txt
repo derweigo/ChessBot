@@ -5,8 +5,5 @@ lichesspy
 discord
 discord.py
 
-# ENV 
-python-dotenv
-
 # Math
 numpy

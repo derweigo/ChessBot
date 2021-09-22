@@ -2,10 +2,8 @@ import os
 import urllib
 import json
 from discord.ext import commands
-from dotenv import load_dotenv
+from config import token as TOKEN
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
 
 # Set command prefix
 bot = commands.Bot(command_prefix='!')
