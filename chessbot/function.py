@@ -10,6 +10,6 @@ def live_game(user: str) -> str:
     """ Return the live game played by the user """
     try:
         game = liuser(user)['playing']
-    except Exception as error:
+    except Exception:
         game = "This user is not playing a game right now."
     return game
