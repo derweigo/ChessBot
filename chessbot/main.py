@@ -1,7 +1,7 @@
 from discord.ext import commands
 import discord
 from config import TOKEN
-from function import *
+from function import get_elo, live_game
 
 # Set command prefix
 bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
