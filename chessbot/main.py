@@ -1,9 +1,10 @@
 from lichesspy.api import user as liuser
 from discord.ext import commands
+import discord
 from config import TOKEN
 
 # Set command prefix
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
 
 
 @bot.command(name='elo')
