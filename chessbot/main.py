@@ -39,9 +39,9 @@ async def get_bullet(ctx, user):
 
 @bot.command(name='live')
 async def get_live_game(ctx, user):
-    """ The function returns the last gmae.  """
+    """ The function returns the live gmae.  """
     try:
-        await ctx.send(f"Here you can find the last game of {user}:", live_game(user))
+        await ctx.send(f"Here you can find the live game of {user}:", live_game(user))
     except Exception as error:
         await ctx.send("Unfortunately an error has occurred")
         await ctx.send(f"Error:: {error}")
