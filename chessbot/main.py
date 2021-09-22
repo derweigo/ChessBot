@@ -2,25 +2,22 @@ import urllib
 import json
 from discord.ext import commands
 from config import TOKEN
-
+import lichesspy.api as lichess
 
 # Set command prefix
 bot = commands.Bot(command_prefix='!')
 
 
 @bot.command(name='elo')
-# arg1: game type i.e. blitz or rapid
-# arg2: player name
-async def get_rapid_elo(ctx, arg1, arg2):
-    # Build the lichess url and open it
-    lichess_url = 'https://lichess.org/api/user/' + str(arg2)
-    j = urllib.request.urlopen(lichess_url)
+async def get_elo(ctx, arg1, arg2):
+   """ 
+        The function returns the Lichess rating of the searched player.
+    """
 
-    # returns JSON object as a dictionary
-    player_data = json.load(j)
-
-    response = f"{arg2}s {arg1} rating auf Lichess ist: " + \
-        str(player_data["perfs"][str(arg1)]["rating"])
-    await ctx.send(response)
+   # Loads all information of the user into the variable
+   user = lichess.user(arg1)['perfs'][arg2]['rating']
+   
+   # Sends the message to the channel
+   await ctx.send(f"{arg1}s {arg2} rating auf Lichess ist: {user}")
 
 bot.run(TOKEN)
