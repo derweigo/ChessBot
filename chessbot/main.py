@@ -18,8 +18,8 @@ async def get_elo(ctx, arg1, arg2):
 
         # Sends the message to the channel
         await ctx.send(f"{arg1}s {arg2} rating auf Lichess ist: {user}")
-    except Exception as e:
+    except Exception as error:
         await ctx.send("Leider ist ein Fehler aufgetreten.")
-        await ctx.send(f"Fehler: {e}")
+        await ctx.send(f"Fehler: {error}")
 
 bot.run(TOKEN)
