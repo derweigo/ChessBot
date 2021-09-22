@@ -1,1 +1,1 @@
-token = "Data"
+TOKEN = "Data"

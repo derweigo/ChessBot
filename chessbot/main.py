@@ -2,7 +2,7 @@ import os
 import urllib
 import json
 from discord.ext import commands
-from config import token as TOKEN
+from config import TOKEN
 
 
 # Set command prefix
@@ -23,5 +23,6 @@ async def get_rapid_elo(ctx, arg1, arg2):
     response = f"{arg2}s {arg1} rating auf Lichess ist: " + \
         str(player_data["perfs"][str(arg1)]["rating"])
     await ctx.send(response)
-
+## PyLint says that this is not a function ^^
+a = TOKEN
 bot.run(TOKEN)
