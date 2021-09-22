@@ -3,7 +3,7 @@ from discord.ext import commands
 from config import TOKEN
 
 # Set command prefix
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='/')
 
 
 @bot.command(name='elo')
