@@ -1,7 +1,8 @@
 # Arvecx
 test.*
 arvecx.out
-.vscode/
+.vscode
+.vscode/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
