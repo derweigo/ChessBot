@@ -1,29 +1,49 @@
-import os
-import urllib
-import json
 from discord.ext import commands
-from dotenv import load_dotenv
-
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+import discord
+from config import TOKEN
+from function import get_elo, live_game
 
 # Set command prefix
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
 
 
-@bot.command(name='elo')
-# arg1: game type i.e. blitz or rapid
-# arg2: player name
-async def get_rapid_elo(ctx, arg1, arg2):
-    # Build the lichess url and open it
-    lichess_url = 'https://lichess.org/api/user/' + str(arg2)
-    j = urllib.request.urlopen(lichess_url)
+@bot.command(name='rapid')
+async def get_rapid(ctx, user):
+    """ The function returns the rapid rating.  """
+    try:
+        await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "rapid"))
+    except Exception as error:
+        await ctx.send("Unfortunately an error has occurred")
+        await ctx.send(f"Error:: {error}")
 
-    # returns JSON object as a dictionary
-    player_data = json.load(j)
 
-    response = f"{arg2}s {arg1} rating auf Lichess ist: " + \
-        str(player_data["perfs"][str(arg1)]["rating"])
-    await ctx.send(response)
+@bot.command(name='blitz')
+async def get_blitz(ctx, user):
+    """ The function returns the blitz rating.  """
+    try:
+        await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "blitz"))
+    except Exception as error:
+        await ctx.send("Unfortunately an error has occurred")
+        await ctx.send(f"Error:: {error}")
+
+
+@bot.command(name='bullet')
+async def get_bullet(ctx, user):
+    """ The function returns the rapid bullet.  """
+    try:
+        await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "bullet"))
+    except Exception as error:
+        await ctx.send("Unfortunately an error has occurred")
+        await ctx.send(f"Error:: {error}")
+
+
+@bot.command(name='live')
+async def get_live_game(ctx, user):
+    """ The function returns the live gmae.  """
+    try:
+        await ctx.send(f"Here you can find the live game of {user}:", live_game(user))
+    except Exception as error:
+        await ctx.send("Unfortunately an error has occurred")
+        await ctx.send(f"Error:: {error}")
 
 bot.run(TOKEN)
