@@ -21,7 +21,7 @@ async def get_rapid(ctx, user):
 async def get_blitz(ctx, user):
     """ The function returns the blitz rating.  """
     try:
-        await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "blitz"))
+        await ctx.send(f"{user}s blitz rating on Lichess is ", get_elo(user, "blitz"))
     except Exception as error:
         await ctx.send("Unfortunately an error has occurred")
         await ctx.send(f"Error:: {error}")
@@ -29,9 +29,9 @@ async def get_blitz(ctx, user):
 
 @bot.command(name='bullet')
 async def get_bullet(ctx, user):
-    """ The function returns the rapid bullet.  """
+    """ The function returns the bullet bullet.  """
     try:
-        await ctx.send(f"{user}s rapid rating on Lichess is ", get_elo(user, "bullet"))
+        await ctx.send(f"{user}s bullet rating on Lichess is ", get_elo(user, "bullet"))
     except Exception as error:
         await ctx.send("Unfortunately an error has occurred")
         await ctx.send(f"Error:: {error}")
@@ -39,7 +39,7 @@ async def get_bullet(ctx, user):
 
 @bot.command(name='live')
 async def get_live_game(ctx, user):
-    """ The function returns the live gmae.  """
+    """ The function returns the live game.  """
     try:
         await ctx.send(f"Here you can find the live game of {user}:", live_game(user))
     except Exception as error:
