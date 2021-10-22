@@ -6,7 +6,7 @@
 ![Git](https://img.shields.io/badge/-Git-%23F05032?logo=git&logoColor=%23ffffff) ![GitHub](https://img.shields.io/badge/GitHub-0d8a00?logo=github&logoColor=ffffff) 
 
 <a href="https://github.com/Fennvel/ChessBot">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?usernamefennvel&repo=ChessBot&theme=algolia" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=fennvel&repo=ChessBot&theme=algolia" />
 </a>
 
 
