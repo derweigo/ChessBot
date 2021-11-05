@@ -5,8 +5,8 @@
 
 ![Git](https://img.shields.io/badge/-Git-%23F05032?logo=git&logoColor=%23ffffff) ![GitHub](https://img.shields.io/badge/GitHub-0d8a00?logo=github&logoColor=ffffff) 
 
-<a href="https://github.com/Fevecx/ChessBot">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Fevecx&repo=ChessBot&theme=algolia" />
+<a href="https://github.com/Riffecx/ChessBot">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Riffecx&repo=ChessBot&theme=algolia" />
 </a>
 
 
@@ -24,7 +24,7 @@ Discord bots can be created on the [Discord Developer](https://discord.com/devel
 You can download the git simply by using the command git clone. Please use the master branch
 
 ```GIT
-git clone https://github.com/Fevecx/chessbot.git
+git clone https://github.com/Riffecx/chessbot.git
 ```
 
 ### Pip install 
